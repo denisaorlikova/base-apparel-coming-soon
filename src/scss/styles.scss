@@ -1,0 +1,31 @@
+// ---- VARIABLES -----
+
+// COLORS
+
+$white: #fff;
+$black: #000;
+$transparent-black: rgba(0,0,0,0.3);
+$grey-dark: #777;
+$grey-light: #ccc;
+
+// MIXINS
+
+@mixin flex($justify, $align, $direction) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: $justify;
+    -ms-flex-pack: $justify;
+    justify-content: $justify;
+    -webkit-box-align: $align;
+    -ms-flex-align: $align;
+    align-items: $align;
+    -webkit-box-direction: $direction;
+    -ms-flex-direction: $direction;
+    flex-direction: $direction;
+}
+
+@mixin box-shadow {
+    -webkit-box-shadow: 0 4px 16px $grey-light;
+    box-shadow: 0 4px 16px $grey-light;
+}
