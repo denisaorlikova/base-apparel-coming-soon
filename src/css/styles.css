@@ -1,2 +1,202 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;500;600&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
 body {
-  background-color: steelblue; }
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body {
+  background: none;
+  font-size: 16px; }
+
+header {
+  height: 100%;
+  font-family: 'Josefin Sans', sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row; }
+
+.header-main {
+  width: 57.64%;
+  height: 100%;
+  padding: 0 13.75rem 0 10.313rem; }
+
+.header-img--mobile {
+  display: none; }
+
+.header-img--desktop {
+  width: 42.36%;
+  height: 100%; }
+  .header-img--desktop img {
+    height: 100%; }
+
+.h-logo {
+  margin-top: 4.125rem; }
+
+.h-heading {
+  font-size: 4rem;
+  font-style: normal;
+  letter-spacing: 17.320634841918945px;
+  text-align: left;
+  margin: 8.5rem 0 2rem 0; }
+
+.h-heading--light {
+  font-weight: 200;
+  line-height: 4rem;
+  color: #ce9797;
+  display: block; }
+
+.h-heading--bold {
+  font-weight: 500;
+  line-height: 4.438rem;
+  color: #413a3a; }
+
+.h-paragraph {
+  font-family: Josefin Sans;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 1.75rem;
+  letter-spacing: 0px;
+  text-align: left;
+  color: #ce9797;
+  padding: 0 1.5rem 0 0;
+  margin-bottom: 3.125rem; }
+
+.h-subscribe form {
+  margin: 0; }
+
+.h-subscribe input[type="email"] {
+  height: 56px;
+  width: 445px;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+  border: 1px solid #ce9797;
+  box-sizing: border-box;
+  border-radius: 28px;
+  padding: 1.125rem; }
+  .h-subscribe input[type="email"]::placeholder {
+    font-weight: 300;
+    font-size: 1rem;
+    font-family: 'Josefin Sans', sans-serif; }
+
+.h-subscribe button {
+  position: relative;
+  width: 100px;
+  height: 56px;
+  left: 345px;
+  bottom: 56px;
+  background: linear-gradient(135deg, #f8bfbf, #ee8c8c);
+  box-shadow: 0px 15px 20px 0 rgba(198, 110, 110, 0.247569);
+  border: none;
+  border-radius: 28px; }
+
+@media screen and (max-width: 375px) {
+  .header-main {
+    width: 100%;
+    padding: 0; }
+  .header-img--desktop {
+    display: none; }
+  .header-img--mobile {
+    display: block; }
+  .h-logo {
+    margin: 32px; }
+    .h-logo img {
+      width: 100px;
+      height: auto; }
+  .h-heading {
+    font-size: 2.5rem;
+    text-align: center;
+    padding: 0 2rem;
+    margin: 4rem 0 1rem 0; }
+  .h-heading--light {
+    font-weight: 200;
+    line-height: 2.625rem;
+    color: #ce9797;
+    display: block; }
+  .h-heading--bold {
+    font-weight: 500;
+    line-height: 2.625rem;
+    color: #413a3a; }
+  .h-paragraph {
+    text-align: center;
+    font-size: 0.875rem;
+    margin: 0 1.275rem 2rem 1.275rem;
+    padding: 1rem; }
+  .h-subscribe {
+    padding: 1.275rem; }
+    .h-subscribe form {
+      margin: 0 0.75rem; }
+    .h-subscribe input[type="email"] {
+      height: 48px;
+      width: 311px;
+      mix-blend-mode: normal;
+      opacity: 0.5;
+      border: 1px solid #ce9797;
+      box-sizing: border-box;
+      border-radius: 28px;
+      padding: 1.125rem; }
+      .h-subscribe input[type="email"]::placeholder {
+        font-weight: 300;
+        font-size: 1rem;
+        font-family: 'Josefin Sans', sans-serif; }
+    .h-subscribe button {
+      position: relative;
+      width: 64px;
+      height: 48px;
+      left: 248px;
+      bottom: 48px;
+      background: linear-gradient(135deg, #f8bfbf, #ee8c8c);
+      box-shadow: 0px 15px 20px 0 rgba(198, 110, 110, 0.247569);
+      border: none;
+      border-radius: 28px; } }

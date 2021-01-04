@@ -11,3 +11,7 @@
 - Gulp
 - Figma, VS Code
 
+## Notes
+
+The font-weights in both Figma file and the style guide doesn't correspond with the actual design. I used font-weights 200, 300 and 500.
+

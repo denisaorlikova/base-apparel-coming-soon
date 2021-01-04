@@ -1,12 +1,26 @@
+@import 'reset';
+
+// FONTS
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;500;600&display=swap');
+
 // ---- VARIABLES -----
 
 // COLORS
 
-$white: #fff;
-$black: #000;
-$transparent-black: rgba(0,0,0,0.3);
-$grey-dark: #777;
-$grey-light: #ccc;
+// Primary
+
+$desaturated-red: hsl(0, 36%, 70%);
+$soft-red: hsl(0, 93%, 68%);
+
+// Neutral
+
+$dark-grayish-red: hsl(0, 6%, 24%);
+
+// Gradients
+
+$gradient-lighter: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+$gradient-darker: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
 
 // MIXINS
 
@@ -28,4 +42,201 @@ $grey-light: #ccc;
 @mixin box-shadow {
     -webkit-box-shadow: 0 4px 16px $grey-light;
     box-shadow: 0 4px 16px $grey-light;
+}
+
+// GENERAL
+
+body {
+    background: none;
+    font-size: 16px;
+}
+
+header {
+    height: 100%;
+    font-family: 'Josefin Sans', sans-serif;
+    @include flex(center, center, row)
+}
+
+.header-main {
+    width: 57.64%;
+    height: 100%;
+    padding: 0 13.75rem 0 10.313rem;
+}
+
+.header-img--mobile {
+    display: none;
+}
+
+.header-img--desktop {
+    width: 42.36%;
+    height: 100%;
+
+    img {
+        height: 100%;
+    }
+}
+
+.h-logo {
+    margin-top: 4.125rem;
+}
+
+.h-heading {
+    font-size: 4rem;
+    font-style: normal;
+    letter-spacing: 17.320634841918945px;
+    text-align: left;
+    margin: 8.5rem 0 2rem 0;
+
+}
+
+.h-heading--light {
+    font-weight: 200;
+    line-height: 4rem;
+    color: $desaturated-red;
+    display: block;
+}
+
+.h-heading--bold {
+    font-weight: 500;
+    line-height: 4.438rem;
+    color: $dark-grayish-red;
+}
+
+.h-paragraph {
+    font-family: Josefin Sans;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1.75rem;
+    letter-spacing: 0px;
+    text-align: left;
+    color: $desaturated-red;
+    padding: 0 1.5rem 0 0;
+    margin-bottom: 3.125rem;
+}
+
+.h-subscribe {
+
+    form {
+        margin: 0;
+    }
+
+    input[type="email"] {
+        height: 56px;
+        width: 445px;
+        mix-blend-mode: normal;
+        opacity: 0.5;
+        border: 1px solid $desaturated-red;
+        box-sizing: border-box;
+        border-radius: 28px;
+        padding: 1.125rem;
+
+        &::placeholder {
+            font-weight: 300;
+            font-size: 1rem;
+            font-family: 'Josefin Sans', sans-serif;
+        }
+    }
+
+    button {
+        position: relative;
+        width: 100px;
+        height: 56px;
+        left: 345px;
+        bottom: 56px;
+        background: $gradient-darker;
+        box-shadow: 0px 15px 20px 0 rgba(198, 110, 110, 0.247569);
+        border: none;
+        border-radius: 28px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+
+    .header-main {
+        width: 100%;
+        padding: 0;
+    }
+    
+    .header-img--desktop {
+        display: none;
+    }
+
+    .header-img--mobile {
+        display: block;
+    }
+
+    .h-logo {
+        margin: 32px;
+
+        img {
+            width: 100px;
+            height: auto;
+        }
+    }
+
+    .h-heading {
+        font-size: 2.5rem;
+        text-align: center;
+        padding: 0 2rem;
+        margin: 4rem 0 1rem 0;
+    }
+
+
+    .h-heading--light {
+        font-weight: 200;
+        line-height: 2.625rem;
+        color: $desaturated-red;
+        display: block;
+    }
+
+    .h-heading--bold {
+        font-weight: 500;
+        line-height: 2.625rem;
+        color: $dark-grayish-red;
+    }
+
+    .h-paragraph {
+        text-align: center;
+        font-size: 0.875rem;
+        margin: 0 1.275rem 2rem 1.275rem;
+        padding: 1rem;
+    }
+
+    .h-subscribe {
+        padding: 1.275rem;
+
+        form {
+            margin: 0 0.75rem;
+        }
+
+        input[type="email"] {
+            height: 48px;
+            width: 311px;
+            mix-blend-mode: normal;
+            opacity: 0.5;
+            border: 1px solid $desaturated-red;
+            box-sizing: border-box;
+            border-radius: 28px;
+            padding: 1.125rem;
+    
+            &::placeholder {
+                font-weight: 300;
+                font-size: 1rem;
+                font-family: 'Josefin Sans', sans-serif;
+            }
+        }
+    
+        button {
+            position: relative;
+            width: 64px;
+            height: 48px;
+            left: 248px;
+            bottom: 48px;
+            background: $gradient-darker;
+            box-shadow: 0px 15px 20px 0 rgba(198, 110, 110, 0.247569);
+            border: none;
+            border-radius: 28px;
+        }
+    }
 }
