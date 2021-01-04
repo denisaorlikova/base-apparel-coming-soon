@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Base Apparel | Coming Soon</title>
     <link rel="stylesheet" href="src/css/styles.css">
+    <script src="src/js/app.js" defer></script>
 </head>
 <body>
     <header>
@@ -26,10 +27,11 @@
             </div>
             <div class="h-subscribe">
                 <form action=" ">
-                    <input type="email" name="email-signup" id="email-signup" placeholder="Email Address">
-                    <button>
+                    <input class="h-subscribe__input" type="email" name="email-signup" id="email-signup" placeholder="Email Address" >
+                    <button id="email-submit">
                         <img src="src/images/icon-arrow.svg" alt="submit email">
                     </button>
+                    <span class="h-subscribe__alert" id="email-alert-msg">Email not valid</span>
                 </form>
             </div>
         </div>

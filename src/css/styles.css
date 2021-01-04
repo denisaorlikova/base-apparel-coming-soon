@@ -133,6 +133,11 @@ header {
       font-weight: 300;
       font-size: 1rem;
       font-family: 'Josefin Sans', sans-serif; }
+  .h-subscribe input:focus,
+  .h-subscribe select:focus,
+  .h-subscribe textarea:focus,
+  .h-subscribe button:focus {
+    outline: none; }
   .h-subscribe button {
     position: relative;
     width: 100px;
@@ -143,6 +148,17 @@ header {
     box-shadow: 0px 15px 20px 0 rgba(198, 110, 110, 0.247569);
     border: none;
     border-radius: 28px; }
+
+.h-subscribe__alert {
+  font-family: Josefin Sans;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 1.75rem;
+  letter-spacing: 0px;
+  text-align: left;
+  color: #f96262;
+  display: none; }
 
 @media screen and (max-width: 375px) {
   .header-main {
