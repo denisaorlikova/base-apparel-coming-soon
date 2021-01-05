@@ -59,9 +59,9 @@ header {
 }
 
 .header-main {
+    min-height: 100vh;
     width: 57.64%;
-    height: 100%;
-    padding: 0 13.75rem 0 10.313rem;
+    padding: 0 0 0 18.33%;
     background-color: $gradient-lighter;
     background-image: url(../images/bg-pattern-desktop.svg);
     background-size: cover;
@@ -74,11 +74,10 @@ header {
 
 .header-img--desktop {
     width: 42.36%;
-    height: 100%;
-
-    img {
-        height: 100%;
-    }
+    min-height: 100vh;
+    background-image: url(../images/hero-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .h-logo {
@@ -91,6 +90,7 @@ header {
     letter-spacing: 17.320634841918945px;
     text-align: left;
     margin: 8.5rem 0 2rem 0;
+    padding: 0 38.89% 0 0;
 
 }
 
@@ -116,12 +116,11 @@ header {
     letter-spacing: 0px;
     text-align: left;
     color: $desaturated-red;
-    padding: 0 1.5rem 0 0;
+    padding: 0 38.89% 0 0;
     margin-bottom: 3.125rem;
 }
 
 .h-subscribe {
-    padding-bottom: 5rem;
 
     form {
         margin: 0;
@@ -137,7 +136,8 @@ header {
 
 .h-subscribe__input {
     height: 56px;
-    width: 445px;
+    width: 53.61%;
+    max-width: 445px;
     mix-blend-mode: normal;
     opacity: 0.5;
     border: 1px solid $desaturated-red;
@@ -153,15 +153,16 @@ header {
 }
 
 .h-subscribe__btn {
-    position: relative;
     width: 100px;
     height: 56px;
-    left: 77.53%;
-    bottom: 56px;
     background: $gradient-darker;
     box-shadow: 0px 15px 20px 0 rgba(198, 110, 110, 0.247569);
     border: none;
     border-radius: 28px;
+    position: relative;
+    right: 105px;
+    top: 5px;
+    z-index: 4;
 }
 
 .h-subscribe__error {
@@ -175,7 +176,7 @@ header {
     color: $soft-red;
     display: none;
     position: relative;
-    bottom: 50px;
+    top: 8px;
     left: 20px;
 
     &::after {
@@ -183,7 +184,7 @@ header {
         display: block;
         position: relative;
         bottom: 74px;
-        left: 260px;
+        left: 30%;
     }
 }
 
