@@ -47,8 +47,9 @@ table {
   border-spacing: 0; }
 
 body {
-  background: none;
-  font-size: 16px; }
+  font-size: 16px;
+  min-height: 100vh;
+  height: 100%; }
 
 header {
   height: 100%;
@@ -70,9 +71,10 @@ header {
   width: 57.64%;
   height: 100%;
   padding: 0 13.75rem 0 10.313rem;
+  background-color: linear-gradient(135deg, white, #fff5f5);
   background-image: url(../images/bg-pattern-desktop.svg);
   background-size: cover;
-  background-repeat: repeat; }
+  background-repeat: no-repeat; }
 
 .header-img--mobile {
   display: none; }
@@ -120,36 +122,38 @@ header {
   padding-bottom: 5rem; }
   .h-subscribe form {
     margin: 0; }
-  .h-subscribe input[type="email"] {
-    height: 56px;
-    width: 445px;
-    mix-blend-mode: normal;
-    opacity: 0.5;
-    border: 1px solid #ce9797;
-    box-sizing: border-box;
-    border-radius: 28px;
-    padding: 1.125rem; }
-    .h-subscribe input[type="email"]::placeholder {
-      font-weight: 300;
-      font-size: 1rem;
-      font-family: 'Josefin Sans', sans-serif; }
   .h-subscribe input:focus,
   .h-subscribe select:focus,
   .h-subscribe textarea:focus,
   .h-subscribe button:focus {
     outline: none; }
-  .h-subscribe button {
-    position: relative;
-    width: 100px;
-    height: 56px;
-    left: 345px;
-    bottom: 56px;
-    background: linear-gradient(135deg, #f8bfbf, #ee8c8c);
-    box-shadow: 0px 15px 20px 0 rgba(198, 110, 110, 0.247569);
-    border: none;
-    border-radius: 28px; }
 
-.h-subscribe__alert {
+.h-subscribe__input {
+  height: 56px;
+  width: 445px;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+  border: 1px solid #ce9797;
+  box-sizing: border-box;
+  border-radius: 28px;
+  padding: 1.125rem; }
+  .h-subscribe__input::placeholder {
+    font-weight: 300;
+    font-size: 1rem;
+    font-family: 'Josefin Sans', sans-serif; }
+
+.h-subscribe__btn {
+  position: relative;
+  width: 100px;
+  height: 56px;
+  left: 77.53%;
+  bottom: 56px;
+  background: linear-gradient(135deg, #f8bfbf, #ee8c8c);
+  box-shadow: 0px 15px 20px 0 rgba(198, 110, 110, 0.247569);
+  border: none;
+  border-radius: 28px; }
+
+.h-subscribe__error {
   font-family: Josefin Sans;
   font-size: 1rem;
   font-style: normal;
@@ -158,7 +162,22 @@ header {
   letter-spacing: 0px;
   text-align: left;
   color: #f96262;
-  display: none; }
+  display: none;
+  position: relative;
+  bottom: 50px;
+  left: 20px; }
+  .h-subscribe__error::after {
+    content: url(../images/icon-error.svg);
+    display: block;
+    position: relative;
+    bottom: 74px;
+    left: 260px; }
+
+.js-show {
+  display: block; }
+
+.js-border-error {
+  border: 2px solid #f96262; }
 
 @media screen and (max-width: 375px) {
   .header-main {

@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Base Apparel | Coming Soon</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="src/images/favicon-32x32.png"> 
+    <title>Base Apparel Coming Soon | Denisa Orlikova</title>
     <link rel="stylesheet" href="src/css/styles.css">
     <script src="src/js/app.js" defer></script>
 </head>
@@ -27,11 +28,13 @@
             </div>
             <div class="h-subscribe">
                 <form action=" ">
-                    <input class="h-subscribe__input" type="email" name="email-signup" id="email-signup" placeholder="Email Address" >
-                    <button id="email-submit">
+                    <input class="h-subscribe__input" type="email" name="email-input" id="email-input" placeholder="Email Address" >
+                    <button class="h-subscribe__btn" id="email-submit">
                         <img src="src/images/icon-arrow.svg" alt="submit email">
                     </button>
-                    <span class="h-subscribe__alert" id="email-alert-msg">Email not valid</span>
+                    <p class="h-subscribe__error" id="subsribe-error">
+                        Please provide a valid email
+                    </p>
                 </form>
             </div>
         </div>

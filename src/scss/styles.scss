@@ -47,8 +47,9 @@ $gradient-darker: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
 // GENERAL
 
 body {
-    background: none;
     font-size: 16px;
+    min-height: 100vh;
+    height: 100%;
 }
 
 header {
@@ -61,9 +62,10 @@ header {
     width: 57.64%;
     height: 100%;
     padding: 0 13.75rem 0 10.313rem;
+    background-color: $gradient-lighter;
     background-image: url(../images/bg-pattern-desktop.svg);
     background-size: cover;
-    background-repeat: repeat;
+    background-repeat: no-repeat;
 }
 
 .header-img--mobile {
@@ -125,44 +127,44 @@ header {
         margin: 0;
     }
 
-    input[type="email"] {
-        height: 56px;
-        width: 445px;
-        mix-blend-mode: normal;
-        opacity: 0.5;
-        border: 1px solid $desaturated-red;
-        box-sizing: border-box;
-        border-radius: 28px;
-        padding: 1.125rem;
-
-        &::placeholder {
-            font-weight: 300;
-            font-size: 1rem;
-            font-family: 'Josefin Sans', sans-serif;
-        }
-    }
-
     input:focus,
     select:focus,
     textarea:focus,
     button:focus {
         outline: none;
     }
+}
 
-    button {
-        position: relative;
-        width: 100px;
-        height: 56px;
-        left: 345px;
-        bottom: 56px;
-        background: $gradient-darker;
-        box-shadow: 0px 15px 20px 0 rgba(198, 110, 110, 0.247569);
-        border: none;
-        border-radius: 28px;
+.h-subscribe__input {
+    height: 56px;
+    width: 445px;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+    border: 1px solid $desaturated-red;
+    box-sizing: border-box;
+    border-radius: 28px;
+    padding: 1.125rem;
+
+    &::placeholder {
+        font-weight: 300;
+        font-size: 1rem;
+        font-family: 'Josefin Sans', sans-serif;
     }
 }
 
-.h-subscribe__alert {
+.h-subscribe__btn {
+    position: relative;
+    width: 100px;
+    height: 56px;
+    left: 77.53%;
+    bottom: 56px;
+    background: $gradient-darker;
+    box-shadow: 0px 15px 20px 0 rgba(198, 110, 110, 0.247569);
+    border: none;
+    border-radius: 28px;
+}
+
+.h-subscribe__error {
     font-family: Josefin Sans;
     font-size: 1rem;
     font-style: normal;
@@ -172,6 +174,25 @@ header {
     text-align: left;
     color: $soft-red;
     display: none;
+    position: relative;
+    bottom: 50px;
+    left: 20px;
+
+    &::after {
+        content: url(../images/icon-error.svg);
+        display: block;
+        position: relative;
+        bottom: 74px;
+        left: 260px;
+    }
+}
+
+.js-show{
+    display: block;
+}
+
+.js-border-error {
+    border: 2px solid $soft-red;
 }
 
 @media screen and (max-width: 375px) {
